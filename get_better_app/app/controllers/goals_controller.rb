@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
 
-  # GET: /goals
   get "/goals" do
+    @goals=Goal.all
     erb :"/goals/index.html"
   end
 
@@ -15,8 +15,8 @@ class GoalsController < ApplicationController
     redirect "/goals"
   end
 
-  # GET: /goals/5
   get "/goals/:id" do
+    @goals=Goal.find_by_id(params[:id])
     erb :"/goals/show.html"
   end
 
