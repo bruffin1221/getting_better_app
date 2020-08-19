@@ -1,19 +1,15 @@
 <h1> <%=@goal.name%> </h1>
 
-
-
-<ul>
-  <li><%=@objective[0].name%></li>
-    <ul>
-      <li><%=@strategy[0].routine%></li>
-        <ul>
-          <%@strategy[1].tactics.each do |s|%>
-            <li><%=s.actions%></li>
-            <%end%>
-        </ul>
-      <li><%=@strategy[1].routine%></li>
-    </ul>
-</ul>
-   
-
+  <h3><%=@objective[0].name%></h3>
+  
+  <h5><%=@strategy[0].routine%></h5>
+  <%@strategy[0].tactics.each do |s|%>
+    <p><%=s.actions%></p>
+    <%end%>
+  
+    <h5><%=@strategy[1].routine%></h5>
+    <%@strategy[1].tactics.each do |s|%>
+      <p><%=s.actions%></p>
+      <%end%>
+    
     

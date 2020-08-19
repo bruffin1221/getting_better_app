@@ -16,3 +16,11 @@ end
 #Tactic.create(actions: "Building the controllers and views", deadline: 8/20, goal_id: 1, objective_id: 1, strategy_id: 2)
 #Tactic.create(actions: "Adding Anthentication", deadline: 8/21, goal_id: 1, objective_id: 1, strategy_id: 2)
 
+#<ol>
+ #         <%@strategy[1].tactics.each do |s|%>
+  #          <li><%=s.actions%></li>
+   #         <%end%>
+
+   #<ol>
+    #  
+    #</0l>
