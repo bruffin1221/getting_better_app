@@ -16,7 +16,9 @@ class GoalsController < ApplicationController
   end
 
   get "/goals/:id" do
-    @goals=Goal.find_by_id(params[:id])
+    @goal=Goal.find_by_id(params[:id])
+    @objective=Objective.where(goal_id: params[:id])
+    @strategy=Strategy.where(goal_id: params[:id])
     erb :"/goals/show.html"
   end
 

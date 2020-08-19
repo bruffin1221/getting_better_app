@@ -1,0 +1,16 @@
+=> [[32m#<Strategy:0x00007ffff6842328[0m
+  id: [1;34m6[0m,
+  created_at: [1;34m2020[0m-[1;34m08[0m-[1;34m18[0m [1;34m21[0m:[1;34m46[0m:[1;34m08[0m [1;34;4mUTC[0m,
+  updated_at: [1;34m2020[0m-[1;34m08[0m-[1;34m18[0m [1;34m21[0m:[1;34m46[0m:[1;34m08[0m [1;34;4mUTC[0m,
+  routine: [31m[1;31m"[0m[31mPlanning Project[1;31m"[0m[31m[0m,
+  deadline: [1;34m0[0m,
+  goal_id: [1;34m4[0m,
+  objective_id: [1;34m5[0m[32m>[0m,
+ [32m#<Strategy:0x00007ffff68421e8[0m
+  id: [1;34m7[0m,
+  created_at: [1;34m2020[0m-[1;34m08[0m-[1;34m18[0m [1;34m21[0m:[1;34m51[0m:[1;34m29[0m [1;34;4mUTC[0m,
+  updated_at: [1;34m2020[0m-[1;34m08[0m-[1;34m18[0m [1;34m21[0m:[1;34m51[0m:[1;34m29[0m [1;34;4mUTC[0m,
+  routine: [31m[1;31m"[0m[31mBuilding the Project[1;31m"[0m[31m[0m,
+  deadline: [1;34m0[0m,
+  goal_id: [1;34m4[0m,
+  objective_id: [1;34m5[0m[32m>[0m]
