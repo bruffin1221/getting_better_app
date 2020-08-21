@@ -7,12 +7,13 @@ class GoalsController < ApplicationController
 
   # GET: /goals/new
   get "/goals/new" do
+
     erb :"/goals/new.html"
   end
 
   # POST: /goals
   post "/goals" do
-    redirect "/goals"
+    redirect "/goals/:id"
   end
 
   get "/goals/:id" do
