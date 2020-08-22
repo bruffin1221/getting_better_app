@@ -13,7 +13,8 @@ class GoalsController < ApplicationController
 
   # POST: /goals
   post "/goals" do
-    redirect "/goals/:id"
+    puts params
+   # redirect "/goals/:id"
   end
 
   get "/goals/:id" do
