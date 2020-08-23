@@ -12,6 +12,7 @@ class ObjectivesController < ApplicationController
 
   # POST: /objectives
   post "/objectives" do
+   
     redirect "/objectives"
   end
 

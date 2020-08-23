@@ -1,1 +1,13 @@
-<h1>Insert the form to create a new instance of your model.</h1>
+<h1>Add Objective</h1>
+
+<form action="/objectives" method="Post">
+<h2>Goal</h2>
+<label>Name:</label>
+<input type="text" name="objective[name]">
+<label>Description:</label>
+<input type="textarea" name="objective[description]">
+<label>Deadline:</label> 
+<input type="text" name="objective[deadline]"><br><br>
+
+<input type="submit" value="Create Objective">
+

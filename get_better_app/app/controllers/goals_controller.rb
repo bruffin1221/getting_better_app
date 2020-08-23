@@ -13,8 +13,8 @@ class GoalsController < ApplicationController
 
   # POST: /goals
   post "/goals" do
-    puts params
-   # redirect "/goals/:id"
+   @goals=Goal.create(name: params[:goal][:name], description: params[:goal][:description],deadline: params[:goal][:deadline]) 
+    redirect "/goals"
   end
 
   get "/goals/:id" do

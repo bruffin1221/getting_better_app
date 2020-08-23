@@ -1,6 +1,6 @@
 <h1>Goals</h2>
 <% @goals.each do |goal|%> 
-<p>Name: <%=goal.name%></p>
-<p>Description:<%=goal.description%></p>
-<p>Deadline: <%=goal.deadline%></p>
+<a href="/goals/<%=goal.id%>"><%=goal.name%></a>
+<br>Description:<%=goal.description%><br>
+<br>Deadline: <%=goal.deadline%><br>
 <%end%>
