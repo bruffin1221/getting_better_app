@@ -5,5 +5,7 @@ class Goal < ActiveRecord::Base
 
 end
 
-#params={"objective"=>{"name"=>"Business", "description"=>"Build a web development and health platform that makes $1000 a month", "deadline"=>"June 1st, 2020"}, 
-#"goal"=>{"goal_ids"=>["Become Digital Nomad"]}}
+#params={"tactic"=>{"action"=>"Writing content for the website", "deadline"=>"June 1st"}, 
+#"goal"=>{"goal_ids"=>["Become Digital Nomad"]}, 
+#"objective"=>{"objective_ids"=>["Business"]}, 
+#"strategy"=>{"strategy_ids"=>["Create and Optimize a health and wellness website"]}}
