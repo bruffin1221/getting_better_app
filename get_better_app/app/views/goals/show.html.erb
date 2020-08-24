@@ -1,18 +1,14 @@
 <h1> <%=@goal.name%> </h1>
+<br>
+<a href="/objectives/new">Add Objective</a>
+<br>
+<% @goal.objectives.each do |g| %>
+    <p> <%=g.name%></p>
+<%end%> 
 
-  <h3><%=@objective[0].name%></h3>
+
+
   
-  <h5><%=@strategy[0].routine%></h5>
-  
-  <% @strategy[0].tactics.each do |s|%>
-    <p><%=s.actions%></p>
-    <%end%>
-    
-    <h5><%=@strategy[1].routine%></h5>
-    
-    <% @strategy[1].tactics.each do |s|%>
-      <p><%=s.actions%></p>
-      <%end%>
 
       
       

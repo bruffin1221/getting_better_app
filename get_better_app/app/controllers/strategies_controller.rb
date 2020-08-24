@@ -7,6 +7,8 @@ class StrategiesController < ApplicationController
 
   # GET: /strategies/new
   get "/strategies/new" do
+    @goal=Goal.all
+    @strategy=Strategy.all
     erb :"/strategies/new.html"
   end
 
