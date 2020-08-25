@@ -2,11 +2,13 @@ class PlansController < ApplicationController
 
   # GET: /plans
   get "/plans" do
+    @plans=Plan.all
     erb :"/plans/index.html"
   end
 
   # GET: /plans/new
   get "/plans/new" do
+   
     erb :"/plans/new.html"
   end
 

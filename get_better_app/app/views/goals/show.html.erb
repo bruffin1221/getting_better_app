@@ -7,7 +7,12 @@
 <%end%> 
 
 
-
+<% @plans.each do |plan|%>
+    <p>Goal <%=plan.goal.name%></p>
+    <p>Objective<%=plan.objective.name%></p>
+    <p>Strategy <%=plan.strategy.routine%></p>
+    <p>Tactic <%=plan.tactic.actions%></p>
+<%end%>
   
 
       

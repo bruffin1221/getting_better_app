@@ -1,1 +1,8 @@
-<h1>This is the Model's index page.</h1>
+<h1>Plans</h1>
+
+<% @plans.each do |plan| %>
+    <p>Goal: <%= plan.goal.name %></p> 
+    <p>Objective: <%= plan.objective.name %></p>
+    <p>Strategy:<%= plan.strategy.routine %></p>
+    <p>Actions:<%= plan.tactic.actions %></p>
+    <% end %>
