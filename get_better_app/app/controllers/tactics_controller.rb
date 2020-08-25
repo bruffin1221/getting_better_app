@@ -16,7 +16,7 @@ class TacticsController < ApplicationController
 
   # POST: /tactics
   post "/tactics" do
-    @tactic=Tactic.create(action: params["tactic"]["action"], deadline: params["tactic"]["deadline"])
+    @tactic=Tactic.create(actions: params["tactic"]["action"], deadline: params["tactic"]["deadline"])
     goal=Goal.find_by(name: params["goal"]["goal_ids"])
     objective=Objective.find_by(name: params["objective"]["objective_ids"])
     strategy=Strategy.find_by(routine: params["strategy"]["strategy_ids"])
