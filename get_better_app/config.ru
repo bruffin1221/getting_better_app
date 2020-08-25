@@ -5,6 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 run ApplicationController
+use PlansController
 use TacticsController
 use StrategiesController
 use ObjectivesController
