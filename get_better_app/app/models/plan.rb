@@ -1,6 +1,6 @@
 class Plan < ActiveRecord::Base
-    belongs_to :goal
-    belongs_to :objective
-    belongs_to :strategy
-    belongs_to :tactic 
+    has_many :goals
+    has_many :objectives
+    has_many :strategies
+    has_many :strategies
 end

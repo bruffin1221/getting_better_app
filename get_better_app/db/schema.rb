@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200825000552) do
+ActiveRecord::Schema.define(version: 20200826044356) do
 
   create_table "goals", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -31,12 +31,8 @@ ActiveRecord::Schema.define(version: 20200825000552) do
   end
 
   create_table "plans", force: :cascade do |t|
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "goal_id"
-    t.integer  "objective_id"
-    t.integer  "strategy_id"
-    t.integer  "tactic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "strategies", force: :cascade do |t|
@@ -57,3 +53,5 @@ ActiveRecord::Schema.define(version: 20200825000552) do
     t.integer  "objective_id"
     t.integer  "strategy_id"
   end
+
+end
