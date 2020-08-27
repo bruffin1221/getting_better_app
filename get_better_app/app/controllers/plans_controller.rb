@@ -8,17 +8,19 @@ class PlansController < ApplicationController
 
   # GET: /plans/new
   get "/plans/new" do
-   
+   @plans=Plan.all
     erb :"/plans/new.html"
   end
 
   # POST: /plans
   post "/plans" do
-    redirect "/plans"
+    @plan=Plan.create(name: params[:plan][:name], description: params[:plan][:description], deadline: params[:plan][:deadline] )
+    redirect "/plans/#{@plan.id}"
   end
 
   # GET: /plans/5
   get "/plans/:id" do
+    @plan=Plan.find_by_id(params[:id])
     erb :"/plans/show.html"
   end
 

@@ -8,14 +8,17 @@ class ObjectivesController < ApplicationController
   # GET: /objectives/new
   get "/objectives/new" do
     @goals=Goal.all
+    @plans=Plan.all
     erb :"/objectives/new.html"
   end
 
   # POST: /objectives
   post "/objectives" do
+    plan=Plan.find_by(name: params[:plan][:plan_ids])
     goal=Goal.find_by(name: params[:goal][:goal_ids])
     @objective=Objective.create(name: params["objective"]["name"], description: params["objective"]["description"], deadline: params["objective"]["deadline"])
     @objective.update(goal_id: goal.id)
+    @objective.update(plan_id: plan.id)
     redirect "/objectives/#{@objective.id}"
   end
 

@@ -6,7 +6,13 @@
 <input type="text" name="strategy[routine]"><br>
 <label>Deadline:</label><br>
 <input type="text" name="strategy[deadline]"><br><br>
-
+<br>
+<h4> Choose Plan for Strategy</h4>
+<% @plans.each do |plan| %>
+   <br><label><%= plan.name %></label>
+    <input type="checkbox" name="plan[plan_ids][]" value="<%= plan.name%>">
+  <% end %><br>
+<br>
 <h4> Choose Goal for Strategy</h4>
 <% @goals.each do |goal| %>
    <br><label><%= goal.name %></label>
@@ -17,7 +23,8 @@
 <h4> Choose Objective for Strategy</h4>
 <% @objectives.each do |objective| %>
    <br><label><%= objective.name %></label>
-    <input type="checkbox" name="objective[objective_ids][]" value="<%= objective.name%>">
+    <input type="checkbox" name="objective[objective_ids][]" value="<%=objective.name%>">
   <% end %>
+  <br>
   <br>
 <input type="submit" value="Create Strategies">
