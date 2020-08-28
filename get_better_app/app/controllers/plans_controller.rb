@@ -21,6 +21,7 @@ class PlansController < ApplicationController
   # GET: /plans/5
   get "/plans/:id" do
     @plan=Plan.find_by_id(params[:id])
+    @tactic=Tactic.where(plan_id: params[:id])
     erb :"/plans/show.html"
   end
 

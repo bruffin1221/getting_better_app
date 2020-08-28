@@ -1,12 +1,56 @@
 <h1><%=@plan.name%></h1>
 <h4><%=@plan.description%></h4>
 <h4><%=@plan.deadline%></h4>
-<ul>
+<ol>
+<% @plan.goals.each do |p| %>
+     <li>Goal: <%=p.name %>
+        <ol>
+        <% @plan.objectives.each do |o| %>
+            <li>Objectives:<%= o.name %>
+            <ol>
+            <% @plan.strategies.each do |s| %>
+                <li>Strategies: <%= s.routine%>
+                 <ol>
+                 <% @plan.tactics.each do |t| %>
+                    <li>Tactics: <%= t.actions %> </li> 
+                  </ol>
+                  <% end %>
+                </li>
+            <% end %>
+            </ol>
+            </li>
+        <% end %> 
+        </ol>
+        <% end %>
+    </li>
+</ol>
+
+<% @plan.goals.each do |p| %>
+    <li>Goal: <%=p.name %>
+       <ol>
+       <% @plan.objectives.each do |o| %>
+           <li>Objectives:<%= o.name %>
+           <ol>
+           <% @tactic.each do |t| %>
+               <li>Strategies: <%= t.strategy.routine%>
+                <ol>
+                   <li>Tactics: <%= t.actions %> </li> 
+                 </ol>
+               </li>
+           <% end %>
+           </ol>
+           </li>
+       <% end %> 
+       </ol>
+       <% end %>
+   </li>
+</ol>
 
 
-</ul>
-
-
+@tactic.each do |t|
+puts  t.strategy.routine
+puts t.actions
+end
 
 
 
