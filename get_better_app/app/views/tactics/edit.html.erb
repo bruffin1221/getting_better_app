@@ -1,1 +1,153 @@
 <h1>Insert the form to edit an instance of your model here.</h1>
+@plan=Plan.find_by_id(7)
+
+@plan.strategies.each do |p| 
+    puts p.objective.name
+    puts p.routine
+end
+x
+@plan.strategies[1].tactics.each do |t|
+    puts t.actions
+end
+
+strategies=@plan.strategies
+strategies.each do |strategy|
+    puts strategy.routine
+end
+
+name 
+.each do |p| 
+    puts p.objective.name
+    puts p.routine
+end
+
+id: 50,
+  created_at: 2020-08-29 21:30:06 UTC,
+  updated_at: 2020-08-29 21:30:06 UTC,
+  actions: "Developing the forms and pages for  planning app",
+  deadline: nil,
+  goal_id: 20,
+  objective_id: 33,
+  strategy_id: 22,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026fd8
+  id: 51,
+  created_at: 2020-08-29 21:31:33 UTC,
+  updated_at: 2020-08-29 21:31:33 UTC,
+  actions: "Add user authentication ",
+  deadline: Fri, 04 Sep 2020,
+  goal_id: 20,
+  objective_id: 33,
+  strategy_id: 22,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026e98
+  id: 52,
+  created_at: 2020-08-29 21:37:17 UTC,
+  updated_at: 2020-08-29 21:37:17 UTC,
+  actions: "Start final Rails lab",
+  deadline: Sun, 30 Aug 2020,
+  goal_id: 20,
+  objective_id: 33,
+  strategy_id: 24,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026d58
+  id: 53,
+  created_at: 2020-08-29 21:38:12 UTC,
+  updated_at: 2020-08-29 21:38:12 UTC,
+  actions: "Complete final Rails lab",
+  deadline: Sun, 06 Sep 2020,
+  goal_id: 20,
+  objective_id: 33,
+  strategy_id: 24,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026c18
+  id: 54,
+  created_at: 2020-08-29 21:47:31 UTC,
+  updated_at: 2020-08-29 21:47:31 UTC,
+  actions: "Planning Rails Project",
+  deadline: Tue, 01 Sep 2020,
+  goal_id: 20,
+  objective_id: 33,
+  strategy_id: 24,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026ad8
+  id: 55,
+  created_at: 2020-08-29 21:51:18 UTC,
+  updated_at: 2020-08-29 21:51:18 UTC,
+  actions: "Developing a content list for articles based on self-improvement and health",
+  deadline: nil,
+  goal_id: 20,
+  objective_id: 34,
+  strategy_id: 25,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026998
+  id: 56,
+  created_at: 2020-08-29 21:52:31 UTC,
+  updated_at: 2020-08-29 21:52:31 UTC,
+  actions: "Writing articles and submitting them to publications ",
+  deadline: Mon, 01 Feb 2021,
+  goal_id: 20,
+  objective_id: 34,
+  strategy_id: 25,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026858
+  id: 57,
+  created_at: 2020-08-29 23:10:56 UTC,
+  updated_at: 2020-08-29 23:10:56 UTC,
+  actions: "Planning and Building ActiveLife.com",
+  deadline: Sat, 01 Feb 2020,
+  goal_id: 21,
+  objective_id: 35,
+  strategy_id: 26,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026718
+  id: 58,
+  created_at: 2020-08-29 23:13:01 UTC,
+  updated_at: 2020-08-29 23:13:01 UTC,
+  actions: "Optimizing the website through writing and distributing content",
+  deadline: Mon, 01 Jun 2020,
+  goal_id: nil,
+  objective_id: nil,
+  strategy_id: nil,
+  plan_id: nil>,
+ #<Tactic:0x00007fffbd0265d8
+  id: 59,
+  created_at: 2020-08-29 23:13:27 UTC,
+  updated_at: 2020-08-29 23:13:27 UTC,
+  actions: "Optimizing the website through writing and distributing content",
+  deadline: Mon, 01 Jun 2020,
+  goal_id: nil,
+  objective_id: nil,
+  strategy_id: nil,
+  plan_id: nil>,
+ #<Tactic:0x00007fffbd026498
+  id: 60,
+  created_at: 2020-08-29 23:14:27 UTC,
+  updated_at: 2020-08-29 23:14:28 UTC,
+  actions: "Optimizing the website through writing and distributing content",
+  deadline: Mon, 01 Jun 2020,
+  goal_id: 21,
+  objective_id: 35,
+  strategy_id: 26,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026358
+  id: 61,
+  created_at: 2020-08-29 23:18:36 UTC,
+  updated_at: 2020-08-29 23:18:36 UTC,
+  actions: "Add education and articles aimed toward the technology industry",
+  deadline: nil,
+  goal_id: 21,
+  objective_id: 36,
+  strategy_id: 27,
+  plan_id: 7>,
+ #<Tactic:0x00007fffbd026218
+  id: 62,
+  created_at: 2020-08-29 23:21:24 UTC,
+  updated_at: 2020-08-29 23:21:25 UTC,
+  actions: "Clean-up Linkedin Profile and connect with people over Linkedin",
+  deadline: Sat, 04 Jan 2020,
+  goal_id: 21,
+  objective_id: 36,
+  strategy_id: 27,
+  plan_id: 7>]
+(END)

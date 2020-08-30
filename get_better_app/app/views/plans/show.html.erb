@@ -25,36 +25,4 @@
     </li>
 </ol>
 
-<% @plan.goals.each do |p| %>
-    <li>Goal: <%=p.name %>
-       <ol>
-       <% @plan.objectives.each do |o| %>
-           <li>Objectives:<%= o.name %>
-           <ol>
-           <% @tactic.each do |t| %>
-               <li>Strategies: <%= t.strategy.routine%>
-                <ol>
-                   <li>Tactics: <%= t.actions %> </li> 
-                 </ol>
-               </li>
-           <% end %>
-           </ol>
-           </li>
-       <% end %> 
-       </ol>
-       <% end %>
-   </li>
-</ol>
-
-
-@tactic.each do |t|
-puts  t.strategy.routine
-puts t.actions
-end
-
-
-
-
-
-
 <a href="/goals/new">Add Goals</a>
