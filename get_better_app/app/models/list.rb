@@ -1,7 +1,9 @@
-class Tactic < ActiveRecord::Base
+class List < ActiveRecord::Base
     belongs_to :plan
     belongs_to :goal
     belongs_to :objective
     belongs_to :strategy
-    has_many :lists
+    belongs_to :tactics
 end
+
+List.select(:objective_id).strategy
