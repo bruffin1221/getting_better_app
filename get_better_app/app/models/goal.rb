@@ -1,18 +1,8 @@
 class Goal < ActiveRecord::Base
-    belongs_to :plan
-    has_many :objectives
-    has_many :strategies
-    has_many :tactics
-    has_many :lists
+  has_many :goal_1s
+  has_many :goal_2s
+  has_many :goal_3s
+  has_many :goal_4s
+  has_many :strategies
+  has_many :tactics
 end
-
-#@list.each do |l|
- #   puts l.name
-  #  puts l.objectives.routine
-#end
-
-#@list=List.where(plan_id: 7)
-
-#goal_list=@list.each do |l|
- #   puts l.goal.name
-#end

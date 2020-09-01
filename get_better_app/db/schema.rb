@@ -11,6 +11,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200901172307) do
+ActiveRecord::Schema.define(version: 20200901214351) do
+
+  create_table "goals", force: :cascade do |t|
+    t.string "name"
+    t.text   "description"
+  end
+
+  create_table "objective_1s", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "goal_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "objective_2s", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "goal_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "objective_3s", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "goal_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "objective_4s", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "goal_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "strategies", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "goal_id"
+    t.integer  "objective_1_id"
+    t.integer  "objective_2_id"
+    t.integer  "objective_3_id"
+    t.integer  "objective_4_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "tactics", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "goal_id"
+    t.integer  "objective_1_id"
+    t.integer  "objective_2_id"
+    t.integer  "objective_3_id"
+    t.integer  "objective_4_id"
+    t.integer  "strategy_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
 end
