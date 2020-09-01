@@ -10,9 +10,4 @@
 <label>Deadline:</label><br>
 <input type="text" name="goal[deadline]"><br><br>
 
-<h4> Choose Plan for Goal</h4>
-<% @plan.each do |plan| %>
-   <br><label><%= plan.name %></label>
-    <input type="checkbox" name="plan[plan_ids][]" value="<%= plan.name%>">
-  <% end %><br><br>
 <input type="submit" value="Create Goal">

@@ -11,64 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200830023156) do
-
-  create_table "goals", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "name"
-    t.text     "description"
-    t.date     "deadline"
-    t.integer  "plan_id"
-  end
-
-  create_table "lists", force: :cascade do |t|
-    t.integer  "plan_id"
-    t.integer  "goal_id"
-    t.integer  "objective_id"
-    t.integer  "strategy_id"
-    t.integer  "tactic_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "objectives", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "name"
-    t.text     "description"
-    t.date     "deadline"
-    t.integer  "goal_id"
-    t.integer  "plan_id"
-  end
-
-  create_table "plans", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "name"
-    t.date     "deadline"
-    t.text     "description"
-  end
-
-  create_table "strategies", force: :cascade do |t|
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.text     "routine"
-    t.date     "deadline"
-    t.integer  "goal_id"
-    t.integer  "objective_id"
-    t.integer  "plan_id"
-  end
-
-  create_table "tactics", force: :cascade do |t|
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.text     "actions"
-    t.date     "deadline"
-    t.integer  "goal_id"
-    t.integer  "objective_id"
-    t.integer  "strategy_id"
-    t.integer  "plan_id"
-  end
+ActiveRecord::Schema.define(version: 20200901172307) do
 
 end
