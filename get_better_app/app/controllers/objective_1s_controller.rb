@@ -13,11 +13,15 @@ class Objective_1sController < ApplicationController
 
   # POST: /objective_1s
   post "/objective_1s" do
-    puts params
+   @objective=Objective_1.create(name: params[:objective_1][:name], description: params[:objective_1][:description], deadline: params[:objective_1][:deadline])
+   goal=Goal.find_by(name: params[:goal][:goal_ids])
+   @objective.update(goal_id: goal.id)
+   redirect "/objective_1s/#{@objective.id}"
   end
 
   # GET: /objective_1s/5
   get "/objective_1s/:id" do
+    @objective=Objective_1.find_by_id(params[:id])
     erb :"/objective_1s/show.html"
   end
 

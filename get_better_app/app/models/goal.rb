@@ -1,8 +1,10 @@
 class Goal < ActiveRecord::Base
-  has_one :on_1s
-  has_one :goal_2s
-  has_one :goal_3s
-  has_one :goal_4s
+  has_one :objective_1
+  has_one :objective_2
+  has_one :objective_3
+  has_one :objective_4
   has_many :strategies
   has_many :tactics
 end
+
+
