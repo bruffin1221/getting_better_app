@@ -7,16 +7,21 @@ class Objective_3sController < ApplicationController
 
   # GET: /objective_3s/new
   get "/objective_3s/new" do
+    @goals=Goal.all
     erb :"/objective_3s/new.html"
   end
 
   # POST: /objective_3s
   post "/objective_3s" do
-    redirect "/objective_3s"
+    @objective=Objective_3.create(name: params[:objective_3][:name], description: params[:objective_3][:description], deadline: params[:objective_3][:deadline])
+    goal=Goal.find_by(name: params[:goal][:goal_ids])
+    @objective.update(goal_id: goal.id)
+    redirect "/objective_3s/#{@objective.id}"
   end
 
   # GET: /objective_3s/5
   get "/objective_3s/:id" do
+    @objective=Objective_3.find_by_id(params[:id])
     erb :"/objective_3s/show.html"
   end
 

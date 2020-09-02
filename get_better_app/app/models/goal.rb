@@ -1,5 +1,5 @@
 class Goal < ActiveRecord::Base
-  has_one :objective_1
+  has_many :objective_
   has_one :objective_2
   has_one :objective_3
   has_one :objective_4

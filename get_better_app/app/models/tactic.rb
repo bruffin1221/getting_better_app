@@ -4,5 +4,5 @@ class Tactic < ActiveRecord::Base
     belongs_to :objective_2
     belongs_to :objective_3
     belongs_to :objective_4
-    belongs_to :tactics
+    belongs_to :strategy
 end
