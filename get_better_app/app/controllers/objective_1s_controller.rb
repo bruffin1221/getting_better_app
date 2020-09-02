@@ -7,12 +7,13 @@ class Objective_1sController < ApplicationController
 
   # GET: /objective_1s/new
   get "/objective_1s/new" do
+    @goals=Goal.all
     erb :"/objective_1s/new.html"
   end
 
   # POST: /objective_1s
   post "/objective_1s" do
-    redirect "/objective_1s"
+    puts params
   end
 
   # GET: /objective_1s/5

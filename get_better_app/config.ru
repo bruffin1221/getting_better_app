@@ -9,9 +9,6 @@ use Objective_4sController
 use Objective_3sController
 use Objective_2sController
 use Objective_1sController
-use ListsController
-use PlansController
 use TacticsController
 use StrategiesController
-use ObjectivesController
 use GoalsController

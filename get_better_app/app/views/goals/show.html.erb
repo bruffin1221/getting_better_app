@@ -1,12 +1,8 @@
 <h1> <%=@goal.name%> </h1>
 <br>
 <p><%=@goal.description%></p>
-<p><%=@goal.plan.name%></p>
-<p><%=@goal.deadline%></p>
-<% @goal.objectives.each do |g| %>
-    <p> <%=g.name%></p>
-<%end%> 
-<a href="/objectives/new">Add Objective</a>
+<p><%=@goal.deadline%></p> 
+
 <br>
 
 

@@ -1,1 +1,20 @@
-<h1>Insert the form to create a new instance of your model.</h1>
+<h1>Objective 1</h1><br>
+
+<h4> Add Objective </h4><br>
+<form action="/objectives_1" method="Post">
+<label>Name:</label><br>
+<input type="text" name="objective_1[name]"><br>
+<label>Description:</label><br>
+<input type="textarea" name="objective_1[description]"><br>
+<label>Deadline:</label><br>
+<input type="text" name="objective_1[deadline]"><br><br>
+
+<h4> Choose Goal for Objective 1</h4>
+<% @goals.each do |goal| %>
+   <br><label><%= goal.name %></label>
+    <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">
+  <% end %> 
+ <br>
+ <br>
+<input type="submit" value="Create Objective 1">
+

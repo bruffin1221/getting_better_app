@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200901214351) do
+ActiveRecord::Schema.define(version: 20200902005751) do
 
   create_table "goals", force: :cascade do |t|
     t.string "name"
     t.text   "description"
+    t.date   "deadline"
   end
 
   create_table "objective_1s", force: :cascade do |t|
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 20200901214351) do
     t.integer  "goal_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "deadline"
   end
 
   create_table "objective_2s", force: :cascade do |t|
@@ -32,6 +34,7 @@ ActiveRecord::Schema.define(version: 20200901214351) do
     t.integer  "goal_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "deadline"
   end
 
   create_table "objective_3s", force: :cascade do |t|
@@ -40,6 +43,7 @@ ActiveRecord::Schema.define(version: 20200901214351) do
     t.integer  "goal_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "deadline"
   end
 
   create_table "objective_4s", force: :cascade do |t|
@@ -48,6 +52,7 @@ ActiveRecord::Schema.define(version: 20200901214351) do
     t.integer  "goal_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "deadline"
   end
 
   create_table "strategies", force: :cascade do |t|
@@ -60,6 +65,7 @@ ActiveRecord::Schema.define(version: 20200901214351) do
     t.integer  "objective_4_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.date     "deadline"
   end
 
   create_table "tactics", force: :cascade do |t|
@@ -73,6 +79,7 @@ ActiveRecord::Schema.define(version: 20200901214351) do
     t.integer  "strategy_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.date     "deadline"
   end
 
 end

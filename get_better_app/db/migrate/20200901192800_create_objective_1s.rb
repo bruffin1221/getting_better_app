@@ -9,3 +9,5 @@ class CreateObjective1s < ActiveRecord::Migration
     end
   end
 end
+
+
