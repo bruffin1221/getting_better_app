@@ -7,10 +7,10 @@ class StrategiesController < ApplicationController
 
   # GET: /strategies/new
   get "/strategies/new" do
-    @objective_1=Objective_1.all
-    @objective_2=Objective_2.all
-    @objective_3=Objective_3.all
-    @objective_4=Objective_4.all
+    @objective1=Objective1.all
+    @objective2=Objective2.all
+    @objective3=Objective3.all
+    @objective4=Objective4.all
     @goals=Goal.all
     erb :"/strategies/new.html"
   end

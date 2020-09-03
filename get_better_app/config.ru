@@ -5,10 +5,10 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 run ApplicationController
-use Objective_4sController
-use Objective_3sController
-use Objective_2sController
-use Objective_1sController
+use Objective4sController
+use Objective3sController
+use Objective2sController
+use Objective1sController
 use TacticsController
 use StrategiesController
 use GoalsController

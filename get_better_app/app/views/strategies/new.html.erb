@@ -11,22 +11,22 @@
 
 <h4> Choose Goal for Strategy</h4>
 
-<% @objective_1.each do |objective| %>
+<% @objective1.each do |objective| %>
   <br><label><%= objective.name %></label>
    <input type="checkbox" name="objective1[objective_1_ids][]" value="<%= objective.name%>"><br>
  <% end %> 
 
-<% @objective_2.each do |objective| %>
+<% @objective2.each do |objective| %>
   <br><label><%= objective.name %></label>
    <input type="checkbox" name="objective2[objective_2_ids][]" value="<%= objective.name%>"><br>
  <% end %> 
 
-<% @objective_3.each do |objective| %>
+<% @objective3.each do |objective| %>
   <br><label><%= objective.name %></label>
    <input type="checkbox" name="objective3[objective_3_ids][]" value="<%= objective.name%>"><br>
  <% end %> 
 
-<% @objective_4.each do |objective| %>
+<% @objective4.each do |objective| %>
    <br><label><%= objective.name %></label>
     <input type="checkbox" name="objective4[objective_4_ids][]" value="<%= objective.name%>"><br><br>
   <% end %> 

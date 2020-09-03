@@ -1,7 +1,7 @@
 <h1>Objective 2</h1><br>
 
 <h4> Add Objective </h4><br>
-<form action="/objective_2s" method="Post">
+<form action="/objective2s" method="Post">
 <label>Name:</label><br>
 <input type="text" name="objective_2[name]"><br>
 <label>Description:</label><br>
@@ -9,7 +9,7 @@
 <label>Deadline:</label><br>
 <input type="text" name="objective_2[deadline]"><br><br>
 
-<h4> Choose Goal for Objective 1</h4>
+<h4> Choose Goal for Objective 2</h4>
 <% @goals.each do |goal| %>
    <br><label><%= goal.name %></label>
     <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">

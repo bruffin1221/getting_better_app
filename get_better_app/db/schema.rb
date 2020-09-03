@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200902005751) do
+ActiveRecord::Schema.define(version: 20200903045802) do
 
   create_table "goals", force: :cascade do |t|
     t.string "name"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20200902005751) do
     t.date   "deadline"
   end
 
-  create_table "objective_1s", force: :cascade do |t|
+  create_table "objective1s", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "goal_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20200902005751) do
     t.date     "deadline"
   end
 
-  create_table "objective_2s", force: :cascade do |t|
+  create_table "objective2s", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "goal_id"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20200902005751) do
     t.date     "deadline"
   end
 
-  create_table "objective_3s", force: :cascade do |t|
+  create_table "objective3s", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "goal_id"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20200902005751) do
     t.date     "deadline"
   end
 
-  create_table "objective_4s", force: :cascade do |t|
+  create_table "objective4s", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "goal_id"
