@@ -1,6 +1,6 @@
 <h1>Strategy</h1><br>
 
-<h4> Create Strategy</h4><br>
+<h3> Create Strategy</h3>
 <form action="/strategies" method="Post">
 <label>Name:</label><br>
 <input type="text" name="strategy[name]"><br>
@@ -9,7 +9,15 @@
 <label>Deadline:</label><br>
 <input type="text" name="strategy[deadline]"><br><br>
 
-<h4> Choose Goal for Strategy</h4>
+<h3> Choose Goal for Strategy</h3>
+<% @goals.each do |goal| %>
+   <br><label><%= goal.name %></label>
+    <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">
+  <% end %> 
+ <br>
+ <br>
+
+<h3> Choose Objective for Strategy</h3>
 
 <% @objective1.each do |objective| %>
   <br><label><%= objective.name %></label>
@@ -31,13 +39,6 @@
     <input type="checkbox" name="objective4[objective_4_ids][]" value="<%= objective.name%>"><br><br>
   <% end %> 
 
-<h4> Choose Goal for Objective</h4>
-<% @goals.each do |goal| %>
-   <br><label><%= goal.name %></label>
-    <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">
-  <% end %> 
- <br>
- <br>
 <input type="submit" value="Create Strategy">
 
 

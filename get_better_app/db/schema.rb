@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200903045802) do
+ActiveRecord::Schema.define(version: 20200904044318) do
 
   create_table "goals", force: :cascade do |t|
     t.string "name"
@@ -59,12 +59,12 @@ ActiveRecord::Schema.define(version: 20200903045802) do
     t.string   "name"
     t.text     "description"
     t.integer  "goal_id"
-    t.integer  "objective_1_id"
-    t.integer  "objective_2_id"
-    t.integer  "objective_3_id"
-    t.integer  "objective_4_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "objective1_id"
+    t.integer  "objective2_id"
+    t.integer  "objective3_id"
+    t.integer  "objective4_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.date     "deadline"
   end
 

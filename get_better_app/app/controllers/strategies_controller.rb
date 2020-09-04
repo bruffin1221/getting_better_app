@@ -23,11 +23,13 @@ class StrategiesController < ApplicationController
 
   # GET: /strategies/5
   get "/strategies/:id" do
+    @strategy=Strategy.find_by_id(params[:id])
     erb :"/strategies/show.html"
   end
 
   # GET: /strategies/5/edit
   get "/strategies/:id/edit" do
+
     erb :"/strategies/edit.html"
   end
 

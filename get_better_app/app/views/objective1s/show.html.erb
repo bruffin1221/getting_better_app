@@ -2,3 +2,11 @@
 <p>Goal: <%= @objective.goal.name%></p>
 <p>Description: <%= @objective.description%></p>
 <p>Deadline: <%= @objective.deadline%></p>
+
+<h4>Strategies</h4>
+<ul>
+<% @objective.strategies.each do |s| %>
+    <li><%=s.name%></li>
+    <li><%=s.description%></li>
+    <% end %>
+</ul>

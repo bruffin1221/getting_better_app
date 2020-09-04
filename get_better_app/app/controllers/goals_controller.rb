@@ -12,7 +12,7 @@ class GoalsController < ApplicationController
 
   # POST: /goals
   post "/goals" do
-   @goal=Goal.create(name: params[:goal][:name], description: params[:goal][:description],deadline: params[:goal][:deadline]) 
+   @goal=Goal.find_or_create_by(name: params[:goal][:name], description: params[:goal][:description],deadline: params[:goal][:deadline]) 
    redirect "/goals/#{@goal.id}"
   end
 

@@ -1,4 +1,4 @@
-<h1>Objective 1</h1><br>
+<h1>Objective 1 Strategies</h1><br>
 
 <h4> Add Objective </h4><br>
 <form action="/objective1s" method="Post">
@@ -9,6 +9,36 @@
 <label>Deadline:</label><br>
 <input type="text" name="objective_1[deadline]"><br><br>
 
+<h4>Create Strategies</h4><br>
+
+<label>Name:</label>
+<input type="text" name="strategy1[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy1[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy1[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy2[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy2[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy2[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy3[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy3[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy3[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy4[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy4[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy4[deadline]"><br><br>
+
 <h4> Choose Goal for Objective 1</h4>
 <% @goals.each do |goal| %>
    <br><label><%= goal.name %></label>
@@ -16,5 +46,5 @@
   <% end %> 
  <br>
  <br>
-<input type="submit" value="Create Objective 1">
+<input type="submit" value="Create">
 

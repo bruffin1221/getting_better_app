@@ -1,1 +1,17 @@
-<h1>This is the show page for an individual instance of your model.</h1>
+<h1><%=@strategy.name%></h1>
+<p><%=@strategy.description%></p>
+<p><%=@strategy.deadline%></p>
+
+<h3>Create Tactic</h3>
+<form action="/tactics" method="Post">
+<label>Name:</label>
+<input type="text" name="tactic[name]">
+<label>Description:</label>
+<input type="textarea" name="tactic[description]">
+<label>Deadline:</label>
+<input type="text" name="tactic[deadline]"><br><br>
+
+<input type="submit" value="Create Tactic">
+
+
+
