@@ -1,4 +1,4 @@
-<h1>Objective 2</h1><br>
+<h1>Objective 2 Strategies</h1><br>
 
 <h4> Add Objective </h4><br>
 <form action="/objective2s" method="Post">
@@ -9,13 +9,43 @@
 <label>Deadline:</label><br>
 <input type="text" name="objective_2[deadline]"><br><br>
 
-<h4> Choose Goal for Objective 2</h4>
+<h4>Create Strategies</h4><br>
+
+<label>Name:</label>
+<input type="text" name="strategy1[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy1[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy1[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy2[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy2[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy2[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy3[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy3[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy3[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy4[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy4[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy4[deadline]"><br><br>
+
+<h4> Choose Goal for Objective 1</h4>
 <% @goals.each do |goal| %>
    <br><label><%= goal.name %></label>
     <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">
   <% end %> 
  <br>
  <br>
-<input type="submit" value="Create Objective 2">
+<input type="submit" value="Create">
 
 

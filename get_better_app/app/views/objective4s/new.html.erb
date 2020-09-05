@@ -1,13 +1,43 @@
-<h1>Objective 4</h1><br>
+<h1>Objective 4 Strategies</h1><br>
 
 <h4> Add Objective </h4><br>
-<form action="/objective4s" method="Post">
+<form action="/objective3s" method="Post">
 <label>Name:</label><br>
-<input type="text" name="objective_4[name]"><br>
+<input type="text" name="objective_3[name]"><br>
 <label>Description:</label><br>
-<input type="textarea" name="objective_4[description]"><br>
+<input type="textarea" name="objective_3[description]"><br>
 <label>Deadline:</label><br>
-<input type="text" name="objective_4[deadline]"><br><br>
+<input type="text" name="objective_3[deadline]"><br><br>
+
+<h4>Create Strategies</h4><br>
+
+<label>Name:</label>
+<input type="text" name="strategy1[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy1[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy1[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy2[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy2[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy2[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy3[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy3[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy3[deadline]"><br><br>
+
+<label>Name:</label>
+<input type="text" name="strategy4[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy4[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy4[deadline]"><br><br>
 
 <h4> Choose Goal for Objective 4</h4>
 <% @goals.each do |goal| %>
@@ -16,6 +46,6 @@
   <% end %> 
  <br>
  <br>
-<input type="submit" value="Create Objective 4">
+<input type="submit" value="Create">
 
 

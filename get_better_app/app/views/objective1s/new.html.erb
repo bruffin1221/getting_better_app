@@ -42,9 +42,8 @@
 <h4> Choose Goal for Objective 1</h4>
 <% @goals.each do |goal| %>
    <br><label><%= goal.name %></label>
-    <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">
+    <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>"><br><br>
   <% end %> 
- <br>
- <br>
+
 <input type="submit" value="Create">
 

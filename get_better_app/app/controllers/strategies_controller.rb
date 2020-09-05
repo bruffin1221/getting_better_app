@@ -19,8 +19,6 @@ class StrategiesController < ApplicationController
   # POST: /strategies
   post "/strategies" do
     objective1=Objective1.find_by(name: params[:objective1][:objective_1_ids])
-    objective2=Objective2.find_by(name: params[:objective2][:objective_2_ids])
-     
     strategy1=Strategy.find_or_create_by(name: params[:strategy1][:name], description: params[:strategy1][:description], deadline: params[:strategy1][:deadline])
     1.update(goal_id: objective1.goal_id)
     objective1.update(objective1_id: objective1.id)
