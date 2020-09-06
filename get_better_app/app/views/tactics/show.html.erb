@@ -13,7 +13,7 @@
 
 <% @objective_1.each do |objective| %>
   <br><label><%= objective.name %></label>
-   <input type="checkbox" name="objective1[objective_1_ids][]" value="<%= objective.name%>"><br>
+   <input type="checkbox unless" name="objective1[objective_1_ids][]" value="<%= objective.name%>"><br>
  <% end %> 
 
 <% @objective_2.each do |objective| %>

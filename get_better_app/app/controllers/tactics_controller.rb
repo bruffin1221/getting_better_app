@@ -2,16 +2,13 @@ class TacticsController < ApplicationController
 
   # GET: /tactics
   get "/tactics" do
-    @objective_1=Objective_1.all
-    @objective_2=Objective_2.all
-    @objective_3=Objective_3.all
-    @objective_4=Objective_4.all
-    @goals=Goal.all
+    
     erb :"/tactics/index.html"
   end
 
   # GET: /tactics/new
   get "/tactics/new" do
+    @strategies=Strategy.all
     erb :"/tactics/new.html"
   end
 

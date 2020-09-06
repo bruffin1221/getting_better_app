@@ -1,1 +1,48 @@
-<h1>Insert the form to create a new instance of your model.</h1>
+<h1>Create Tactics for Strategies</h1>
+<br
+<br>
+<h4>Choose Strategy</h4><br>
+<% @strategies.each do |strategy| %>
+  <label><%= strategy.name %></label>
+     <input type="checkbox" name="strategy[strategy_ids][]" value="<%= strategy.name%>">
+   <% end %> 
+<br>
+<br>
+<h4> Create Strategy</h4>
+
+<label>Name:</label><br>
+<input type="text" name="tactic1[name]">
+<label>Description:</label>
+<input type="textarea" name="tactic1[description]">
+<label>Deadline:</label>
+<input type="text" name="tactic1[deadline]"><br><br>
+
+<label>Name:</label><br>
+<input type="text" name="tactic2[name]">
+<label>Description:</label>
+<input type="textarea" name="tactic2[description]">
+<label>Deadline:</label>
+<input type="text" name="tactic2[deadline]"><br><br>
+
+<label>Name:</label><br>
+<input type="text" name="tactic3[name]">
+<label>Description:</label>
+<input type="textarea" name="tactic3[description]">
+<label>Deadline:</label>
+<input type="text" name="tactic3[deadline]"><br><br>
+
+<label>Name:</label><br>
+<input type="text" name="tactic4[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy4[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy4[deadline]"><br><br>
+
+<label>Name:</label><br>
+<input type="text" name="strategy5[name]">
+<label>Description:</label>
+<input type="textarea" name="strategy5[description]">
+<label>Deadline:</label>
+<input type="text" name="strategy5[deadline]"><br><br>
+
+<input type="submit" value="Create Strategy">
