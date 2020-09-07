@@ -14,6 +14,7 @@ class TacticsController < ApplicationController
 
   # POST: /tactics
   post "/tactics" do
+    
     redirect "/tactics"
   end
 
