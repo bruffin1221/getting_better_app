@@ -2,6 +2,7 @@
 <br
 <br>
 <h4>Choose Strategy</h4><br>
+<form action="/tactics" method="Post">
 <% @strategies.each do |strategy| %>
   <label><%= strategy.name %></label>
      <input type="checkbox" name="strategy[strategy_ids][]" value="<%= strategy.name%>">
@@ -45,4 +46,4 @@
 <label>Deadline:</label>
 <input type="text" name="strategy5[deadline]"><br><br>
 
-<input type="submit" value="Create Strategy">
+<input type="submit" value="Create">

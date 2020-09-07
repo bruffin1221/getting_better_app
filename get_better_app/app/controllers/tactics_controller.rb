@@ -14,8 +14,8 @@ class TacticsController < ApplicationController
 
   # POST: /tactics
   post "/tactics" do
-    
-    redirect "/tactics"
+    strategy=Strategy.find_by(name:)
+    #redirect "/tactics"
   end
 
   # GET: /tactics/5
