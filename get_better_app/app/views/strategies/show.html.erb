@@ -2,34 +2,11 @@
 <p><%=@strategy.description%></p>
 <p><%=@strategy.deadline%></p>
 
-<h3>Create Tactic</h3>
-<form action="/tactics" method="Post">
-<label>Name:</label>
-<input type="text" name="tactic[name]">
-<label>Description:</label>
-<input type="textarea" name="tactic[description]">
-<label>Deadline:</label>
-<input type="text" name="tactic[deadline]"><br><br>
-
-<form action="/tactics" method="Post">
-<label>Name:</label>
-<input type="text" name="tactic[name]">
-<label>Description:</label>
-<input type="textarea" name="tactic[description]">
-<label>Deadline:</label>
-<input type="text" name="tactic[deadline]"><br><br>
-
-<form action="/tactics" method="Post">
-<label>Name:</label>
-<input type="text" name="tactic[name]">
-<label>Description:</label>
-<input type="textarea" name="tactic[description]">
-<label>Deadline:</label>
-<input type="text" name="tactic[deadline]"><br><br>
-
-<form action="/tactics" method="Post">
-<label>Name:</label>
-<input type="text" name="tactic[name]">
-<label>Description:</lab
-
+<h4>Tactics</h4>
+<ul>
+<% @strategy.tactics.each do |s| %>
+    <li><%=s.name%></li>
+    <li><%=s.description%></li>
+    <% end %>
+</ul>
 

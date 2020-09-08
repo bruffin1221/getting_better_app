@@ -8,32 +8,64 @@ class StrategiesController < ApplicationController
 
   # GET: /strategies/new
   get "/strategies/new" do
-    @objective1=Objective1.all
-    @objective2=Objective2.all
-    @objective3=Objective3.all
-    @objective4=Objective4.all
-    @goals=Goal.all
+    @strategies=Strategy.all
     erb :"/strategies/new.html"
   end
 
   # POST: /strategies
-  post "/strategies" do
-    objective1=Objective1.find_by(name: params[:objective1][:objective_1_ids])
-    strategy1=Strategy.find_or_create_by(name: params[:strategy1][:name], description: params[:strategy1][:description], deadline: params[:strategy1][:deadline])
-    1.update(goal_id: objective1.goal_id)
-    objective1.update(objective1_id: objective1.id)
-    objective2.update(goal_id: objective1.goal_id)
-    objective2.update(objective2_id: objective2.id)
+  post "/strategies" do 
+    strategy=Strategy.find_by(name: params[:strategy][:strategy_ids])
+    goal=strategy.goal_id
+    if !params[:tactic1][:name].empty?
+      tactic1=Tactic.create(name: params[:tactic1][:name], description: params[:tactic1][:description], deadline: params[:tactic1][:description])
+      tactic1.update(strategy_id: strategy.id)
+      tactic1.update(goal_id: goal )
+      tactic1.update(objective_1_id: strategy.objective1_id)
+      tactic1.update(objective_2_id: strategy.objective2_id)
+      tactic1.update(objective_3_id: strategy.objective3_id)
+      tactic1.update(objective_4_id: strategy.objective4_id)
+    end
 
-    #objective2=Objective2.find_or_create_by(name: params[:objective2][:name], description: params[:objective2][:description], deadline: params[:objective2][:deadline])
-    #objective2.update(goal_id: @goal.id)
-    
-    #objective3=Objective3.find_or_create_by(name: params[:objective3][:name], description: params[:objective3][:description], deadline: params[:objective3][:deadline])
-    #objective3.update(goal_id: @goal.id)
-    
-    #objective4=Objective4.find_or_create_by(name: params[:objective4][:name], description: params[:objective4][:description], deadline: params[:objective4][:deadline])
-    #objective4.update(goal_id: @goal.id)
-    redirect "/strategies"
+    if !params[:tactic2][:name].empty? 
+      tactic2=Tactic.create(name: params[:tactic2][:name], description: params[:tactic2][:description], deadline: params[:tactic1][:description] )
+      tactic2.update(strategy_id: strategy.id)
+      tactic2.update(goal_id: goal)
+      tactic2.update(objective_1_id: strategy.objective1_id)
+      tactic2.update(objective_2_id: strategy.objective2_id)
+      tactic2.update(objective_3_id: strategy.objective3_id)
+      tactic2.update(objective_4_id: strategy.objective4_id)
+    end
+
+    if !params[:tactic3][:name].empty? 
+      tactic3=Tactic.create(name: params[:tactic3][:name], description: params[:tactic3][:description], deadline: params[:tactic3][:description] )
+      tactic3.update(strategy_id: strategy.id)
+      tactic3.update(goal_id: goal)
+      tactic3.update(objective_1_id: strategy.objective1_id)
+      tactic3.update(objective_2_id: strategy.objective2_id)
+      tactic3.update(objective_3_id: strategy.objective3_id)
+      tactic3.update(objective_4_id: strategy.objective4_id)
+    end
+
+    if !params[:tactic4][:name].empty? 
+      tactic4=Tactic.create(name: params[:tactic4][:name], description: params[:tactic4][:description], deadline: params[:tactic4][:description]) 
+      tactic4.update(strategy_id: strategy.id)
+      tactic4.update(goal_id: goal)
+      tactic4.update(objective_1_id: strategy.objective1_id)
+      tactic4.update(objective_2_id: strategy.objective2_id)
+      tactic4.update(objective_3_id: strategy.objective3_id)
+      tactic4.update(objective_4_id: strategy.objective4_id)
+    end
+
+    if !params[:tactic5][:name].empty? 
+      tactic5=Tactic.create(name: params[:tactic5][:name], description: params[:tactic5][:description], deadline: params[:tactic5][:description] )
+      tactic5.update(strategy_id: strategy.id)
+      tactic5.update(goal_id: goal)
+      tactic5.update(objective_1_id: strategy.objective1_id)
+      tactic5.update(objective_2_id: strategy.objective2_id)
+      tactic5.update(objective_3_id: strategy.objective3_id)
+      tactic5.update(objective_4_id: strategy.objective4_id)
+    end
+    redirect "/strategies/#{strategy.id}"
   end
 
   # GET: /strategies/5
@@ -44,6 +76,7 @@ class StrategiesController < ApplicationController
 
   # GET: /strategies/5/edit
   get "/strategies/:id/edit" do
+    
 
     erb :"/strategies/edit.html"
   end

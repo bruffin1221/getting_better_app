@@ -8,14 +8,14 @@ class TacticsController < ApplicationController
 
   # GET: /tactics/new
   get "/tactics/new" do
-    @strategies=Strategy.all
+   
     erb :"/tactics/new.html"
   end
 
   # POST: /tactics
   post "/tactics" do
-    strategy=Strategy.find_by(name:)
-    #redirect "/tactics"
+    
+    redirect "/tactics"
   end
 
   # GET: /tactics/5
