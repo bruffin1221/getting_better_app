@@ -1,7 +1,34 @@
 <h1> <%=@goal.name%> </h1>
+<h3><%=@goal.description%></h3>
+<h3><%=@goal.deadline%></h3> 
 <br>
-<p><%=@goal.description%></p>
-<p><%=@goal.deadline%></p> 
+<h3>Goals and Strategies</h3>
 <br>
-
+<h5><%=@goal.objective1.name%></h5>
+<ul>
+<%  @goal.objective1.strategies.each do |strategy| %>
+    <li><%= strategy.name %><li>
+    <% end %>
+</ul>
+<br>  
+<h5><%=@goal.objective2.name%></h5>
+<ul>
+<%  @goal.objective2.strategies.each do |strategy| %>
+    <li><%= strategy.name %><li>
+    <% end %>
+</ul>
+<br>
+<h5><%=@goal.objective3.name%></h5>
+<ul>
+<%  @goal.objective3.strategies.each do |strategy| %>
+    <li><%= strategy.name %><li>
+    <% end %>
+</ul>
+<br>
+<h5><%=@goal.objective4.name%></h5>
+<ul>
+<%  @goal.objective4.strategies.each do |strategy| %>
+    <li><%= strategy.name %><li>
+    <% end %>
+</ul>
     

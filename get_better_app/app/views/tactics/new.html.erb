@@ -1,49 +1,49 @@
 <h1>Create Tactics for Strategies</h1>
 <br
 <br>
-<h4>Choose Strategy</h4><br>
+<h4>Choose Tactic</h4><br>
 <form action="/tactics" method="Post">
-<% @strategies.each do |strategy| %>
-  <label><%= strategy.name %></label>
-     <input type="checkbox" name="strategy[strategy_ids][]" value="<%= strategy.name%>">
+<% @tactics.each do |tactic| %>
+  <label><%= tactic.name %></label>
+     <input type="checkbox" name="tactic[tactic_ids][]" value="<%= tactic.name%>">
    <% end %> 
 <br>
 <br>
-<h4> Create Strategy</h4>
+<h4> Create Task</h4>
 
 <label>Name:</label><br>
-<input type="text" name="tactic1[name]">
+<input type="text" name="task1[name]">
 <label>Description:</label>
-<input type="textarea" name="tactic1[description]">
+<input type="textarea" name="task1[description]">
 <label>Deadline:</label>
-<input type="text" name="tactic1[deadline]"><br><br>
+<input type="text" name="task1[deadline]"><br><br>
 
 <label>Name:</label><br>
-<input type="text" name="tactic2[name]">
+<input type="text" name="task2[name]">
 <label>Description:</label>
-<input type="textarea" name="tactic2[description]">
+<input type="textarea" name="task2[description]">
 <label>Deadline:</label>
-<input type="text" name="tactic2[deadline]"><br><br>
+<input type="text" name="task2[deadline]"><br><br>
 
 <label>Name:</label><br>
-<input type="text" name="tactic3[name]">
+<input type="text" name="task3[name]">
 <label>Description:</label>
-<input type="textarea" name="tactic3[description]">
+<input type="textarea" name="task3[description]">
 <label>Deadline:</label>
-<input type="text" name="tactic3[deadline]"><br><br>
+<input type="text" name="task3[deadline]"><br><br>
 
 <label>Name:</label><br>
-<input type="text" name="tactic4[name]">
+<input type="text" name="task4[name]">
 <label>Description:</label>
-<input type="textarea" name="strategy4[description]">
+<input type="textarea" name="task4[description]">
 <label>Deadline:</label>
-<input type="text" name="strategy4[deadline]"><br><br>
+<input type="text" name="task4[deadline]"><br><br>
 
 <label>Name:</label><br>
-<input type="text" name="strategy5[name]">
+<input type="text" name="task5[name]">
 <label>Description:</label>
-<input type="textarea" name="strategy5[description]">
+<input type="textarea" name="task5[description]">
 <label>Deadline:</label>
-<input type="text" name="strategy5[deadline]"><br><br>
+<input type="text" name="task5[deadline]"><br><br>
 
 <input type="submit" value="Create">

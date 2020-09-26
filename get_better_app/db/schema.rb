@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200904044318) do
+ActiveRecord::Schema.define(version: 20200925204008) do
 
   create_table "goals", force: :cascade do |t|
     t.string "name"
@@ -81,5 +81,8 @@ ActiveRecord::Schema.define(version: 20200904044318) do
     t.datetime "updated_at",     null: false
     t.date     "deadline"
   end
+
+# Could not dump table "tasks" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end

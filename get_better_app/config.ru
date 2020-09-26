@@ -5,6 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 run ApplicationController
+use TasksController
 use Objective4sController
 use Objective3sController
 use Objective2sController
