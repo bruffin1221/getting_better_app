@@ -13,6 +13,22 @@ class GoalsController < ApplicationController
   # POST: /goals
   post "/goals" do
     @goal=Goal.find_or_create_by(name: params[:goal][:name], description: params[:goal][:description], deadline: params[:goal][:deadline]) 
+    if !params[:objective_1][:name].empty?
+      objective1=Objective1.create(name: params[:objective_1][:name], description: params[:objective_1][:description], deadline: params[:objective_1][:deadline])
+      objective1.update(goal_id: @goal.id)
+    end
+    if !params[:objective_2][:name].empty? 
+      objective_2=Objective2.create(name: params[:objective_2][:name], description: params[:objective_2][:description], deadline: params[:objective_2][:deadline] )
+      objective_2.update(goal_id: @goal.id)
+    end
+    if !params[:objective_3][:name].empty? 
+      objective3=Objective3.create(name: params[:objective_3][:name], description: params[:objective_3][:description], deadline: params[:objective_3][:deadline] )
+      objective3.update(goal_id: @goal.id)
+    end
+    if !params[:objective_4][:name].empty? 
+      objective4=Objective4.create(name: params[:objective_4][:name], description: params[:objective_4][:description], deadline: params[:objective_4][:description]) 
+      objective4.update(goal_id: @goal.id)
+    end
     redirect "/goals/#{@goal.id}"
   end
 
