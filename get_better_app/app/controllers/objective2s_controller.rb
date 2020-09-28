@@ -7,20 +7,16 @@ class Objective2sController < ApplicationController
 
   # GET: /objective_2s/new
   get "/objective2s/new" do
-    @goals=Goal.all
+    @objectives=Objective2.all
     erb :"/objective2s/new.html"
   end
 
   # POST: /objective2s
   post "/objective2s" do
-    @objective=Objective2.find_or_create_by(name: params[:objective_2][:name], description: params[:objective_2][:description], deadline: params[:objective_2][:deadline])
-    @goal=Goal.find_by(name: params[:goal][:goal_ids])
-    @objective.update(goal_id: @goal.id)
-    
+    @objective=Objective2.find_by(name: params[:objective_2][:name])
     if !params[:strategy1][:name].empty?
       strategy1=Strategy.find_or_create_by(name: params[:strategy1][:name], description: params[:strategy1][:description], deadline: params[:strategy1][:deadline])
-      strategy1.update(goal_id: @goal.id)
-      strategy1.update(objective2_id: @objective.id)
+      strategy1.update(goal_id: @objective.goal_id, objective2_id: @objective.id)
     end
     
     if !params[:strategy2][:name].empty?

@@ -1,13 +1,13 @@
 <h1>Strategies for Objective 1</h1><br>
 
-<h4>Choose Objective </h4><br>
+<h4>Choose Goal and Objective </h4>
 <form action="/objective1s" method="Post">
 <% @objectives.each do |objective| %>
   <br><label><%= objective.name %></label>
-   <input type="checkbox" name="objective[objective_ids][]" value="<%= objective.name%>"><br><br>
- <% end %> 
+   <input type="checkbox" name="objective[objective_ids][]" value="<%= objective.name %>"><br><br>
+ <% end %>
 
-<h4>Create Strategies</h4><br>
+<h4> Create Strategies</h4><br>
 
 <label>Name:</label>
 <input type="text" name="strategy1[name]">
