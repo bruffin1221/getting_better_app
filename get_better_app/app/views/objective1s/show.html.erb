@@ -6,10 +6,10 @@
 <h3>Strategies</h3>
 <br>
 <a href="/objective1s/new">Add Strategies</a><br><br>
-
+<ul>
 <% @objective.strategies.each do |s| %>
-    <a href="/strategies/<%=s.id%>"><%=s.name%></a></br>
-    <%=s.description%><br>
+    <li><a href="/strategies/<%=s.id%>"><%=s.name%></a></li>
+    <li><%=s.description%></li><br>
     <% end %><br>
-
+</ul>
 <a href="/goals/<%= @objective.goal_id %>">Return to <%=@objective.goal.name%></a>

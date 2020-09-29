@@ -8,8 +8,8 @@
 <a href="/objective2s/new">Add Strategies</a><br><br>
 <ul>
 <% @objective.strategies.each do |s| %>
-    <li><%=s.name%></li>
-    <li><%=s.description%></li>
+    <li> <a href="/strategies/<%=s.id%>"><%=s.name%></a></li>
+    <li><%= s.description %></li><br>
     <% end %>
 </ul>
 <br>

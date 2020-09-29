@@ -1,13 +1,11 @@
 <h1>Objective 4 Strategies</h1><br>
 
-<h4> Add Objective </h4><br>
+<h4> Add Objective </h4>
 <form action="/objective4s" method="Post">
-<label>Name:</label><br>
-<input type="text" name="objective_4[name]"><br>
-<label>Description:</label><br>
-<input type="textarea" name="objective_4[description]"><br>
-<label>Deadline:</label><br>
-<input type="text" name="objective_4[deadline]"><br><br>
+<% @objective4s.each do |objective4| %>
+  <br><label><%= objective4.name %></label>
+   <input type="checkbox" name="objective4[objective_ids][]" value="<%= objective4.name %>"><br><br>
+ <% end %>
 
 <h4>Create Strategies</h4><br>
 
@@ -37,14 +35,7 @@
 <label>Description:</label>
 <input type="textarea" name="strategy4[description]">
 <label>Deadline:</label>
-<input type="text" name="strategy4[deadline]"><br><br>
-
-<h4> Choose Goal for Objective 4</h4>
-<% @goals.each do |goal| %>
-   <br><label><%= goal.name %></label>
-    <input type="checkbox" name="goal[goal_ids][]" value="<%= goal.name%>">
-  <% end %> 
- <br>
+<input type="text" name="strategy4[deadline]"><br><br> 
  <br>
 <input type="submit" value="Create">
 

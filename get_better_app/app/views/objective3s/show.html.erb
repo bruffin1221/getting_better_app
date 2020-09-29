@@ -4,9 +4,11 @@
 <p>Deadline: <%= @objective.deadline%></p>
 
 <h4>Strategies</h4>
+<a href="/objective3s/new">Add Strategies</a><br><br>
 <ul>
 <% @objective.strategies.each do |s| %>
-    <li><%=s.name%></li>
-    <li><%=s.description%></li>
+    <li><a href="/strategies/<%=s.id%>"><%=s.name%></a></li>
+    <li><%=s.description%></li><br>
     <% end %>
 </ul>
+<a href="/goals/<%= @objective.goal_id %>">Return to <%=@objective.goal.name%></a>
