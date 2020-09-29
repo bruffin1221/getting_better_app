@@ -2,3 +2,5 @@
 <p><%= @task.description %></p>
 <p><%= @task.deadline %></p>
 <p><%= @task.tactic.name %></p>
+
+<a href="/tactics/<%= @task.tactic.id %>">Return to <%=@task.tactic.name%></a>

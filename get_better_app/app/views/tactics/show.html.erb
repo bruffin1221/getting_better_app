@@ -3,10 +3,15 @@
 <h3> <%= @tactic.deadline %></h3>
 
 <h3> Tasks</h3>
+<a href="/tactics/new">Add Tasks</a><br><br>
 <ul>
-<% @tactic.tasks.each do |tactic| %>
-    <li><%= tactic.name %></li>
+<% @tactic.tasks.each do |task| %>
+    <li><a href="/tasks/<%=task.id%>"><%= task.name %></a></li>
+    <li><%= task.description %></li><br>
     <% end %>
 </ul>
+
+<a href="/goals/<%= @tactic.goal_id %>">Return to <%=@tactic.goal.name%></a>
+
 
 
