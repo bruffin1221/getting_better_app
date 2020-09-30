@@ -1,13 +1,13 @@
 <h1> Edit <%= @goal.name %></h1>
 
 
-<form action="/goals/<%= @goal.id %>" method="POST">
-  <input id="hidden" type="hidden" name="_method" value="patch">
+<form method="POST" action="/goals/<%= @goal.id %>">
   <label>Name:</label><br>
   <input type="text" name="name" value="<%= @goal.name %>"><br><br>
   <label>Description:</label><br>
   <input type="text" name="description" value="<%= @goal.description %>"><br><br>
   <label>Deadline:</label><br>
   <input type="text" name="deadline" value="<%= @goal.deadline %>"><br>
+  <input type="hidden" name="_method" value="patch">
   <input type="submit" value="Edit Changes">
 </form>

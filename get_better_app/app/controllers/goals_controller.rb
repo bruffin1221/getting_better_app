@@ -39,13 +39,15 @@ class GoalsController < ApplicationController
 
   # GET: /goals/5/edit
   get "/goals/:id/edit" do
-    @goal=Goal.find_by_id(params[:id])
+    @goal=Goal.find_by_id(20)
     erb :"/goals/edit.html"
   end
 
   # PATCH: /goals/5
-  patch "/goals/:id" do
-   puts params
+  post "/goals/:id" do
+    @goal=Goal.find_by_id(params[:id])
+    @goal.update(name: params[:name], description: params[:description], deadline: params[:deadline])
+    redirect "/goals/#{@goal.id}" 
   end
 
   # DELETE: /goals/5/delete
