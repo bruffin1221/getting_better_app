@@ -41,13 +41,15 @@ class Objective2sController < ApplicationController
 
   # GET: /objective2s/5/edit
   get "/objective2s/:id/edit" do
+    @objective=Objective2.find_by_id(params[:id])
     erb :"/objective2s/edit.html"
   end
 
   # PATCH: /objective2s/5
-  patch "/objective2s/:id" do
-    @objective=Objective.find_by_id(params[:id])
-    redirect "/objective2s/:id"
+  post "/objective2s/:id" do
+    @objective=Objective2.find_by_id(params[:id])
+    @objective.update(name: params[:name], description: params[:description], deadline: params[:deadline])
+    redirect "/objective2s/#{@objective.id}" 
   end
 
   # DELETE: /objective2s/5/delete

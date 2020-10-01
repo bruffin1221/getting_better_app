@@ -1,7 +1,9 @@
 <h1> <%= @tactic.name %></h1>
 <h3><%= @tactic.description %> </h3>
 <h3> <%= @tactic.deadline %></h3>
-
+<a href="/tactics/<%= @tactic.id %>/edit"><input type="button" value="Edit"></a>
+<br>
+<br>
 <h3> Tasks</h3>
 <a href="/tactics/new">Add Tasks</a><br><br>
 <ul>

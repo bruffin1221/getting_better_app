@@ -1,7 +1,9 @@
 <h1><%=@strategy.name%></h1>
 <p><%=@strategy.description%></p>
 <p><%=@strategy.deadline%></p>
-
+<a href="/strategies/<%= @strategy.id %>/edit"><input type="button" value="Edit"></a>
+<br>
+<br>
 <h4>Tactics</h4>
 <a href="/strategies/new">Add Tactics</a><br><br>
 <ul>

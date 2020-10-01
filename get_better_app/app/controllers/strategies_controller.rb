@@ -55,14 +55,15 @@ class StrategiesController < ApplicationController
 
   # GET: /strategies/5/edit
   get "/strategies/:id/edit" do
-    
-
+    @strategy=Strategy.find_by_id(params[:id])
     erb :"/strategies/edit.html"
   end
 
   # PATCH: /strategies/5
-  patch "/strategies/:id" do
-    redirect "/strategies/:id"
+  post "/strategies/:id" do
+    @strategy=Strategy.find_by_id(params[:id])
+    @strategy.update(name: params[:name], description: params[:description], deadline: params[:deadline])
+    redirect "/strategies/#{@strategy.id}"
   end
 
   # DELETE: /strategies/5/delete

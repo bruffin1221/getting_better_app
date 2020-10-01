@@ -1,1 +1,14 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
+<h1> Edit <%= @strategy.name %></h1>
+
+
+<form method="POST" action="/strategies/<%= @strategy.id %>">
+  <label>Name:</label><br>
+  <input type="text" name="name" value="<%= @strategy.name %>"><br><br>
+  <label>Description:</label><br>
+  <input type="text" name="description" value="<%= @strategy.description %>"><br><br>
+  <label>Deadline:</label><br>
+  <input type="text" name="deadline" value="<%= @strategy.deadline %>"><br>
+  <input type="hidden" name="_method" value="patch">
+  <input type="submit" value="Edit Strategy">
+</form>
+

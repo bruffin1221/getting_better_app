@@ -1,1 +1,13 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
+<h1> Edit <%= @objective.name %></h1>
+
+
+<form method="POST" action="/objective1s/<%= @objective.id %>">
+  <label>Name:</label><br>
+  <input type="text" name="name" value="<%= @objective.name %>"><br><br>
+  <label>Description:</label><br>
+  <input type="text" name="description" value="<%= @objective.description %>"><br><br>
+  <label>Deadline:</label><br>
+  <input type="text" name="deadline" value="<%= @objective.deadline %>"><br>
+  <input type="hidden" name="_method" value="patch">
+  <input type="submit" value="Edit Objective">
+</form>

@@ -2,7 +2,9 @@
 <p>Goal: <%= @objective.goal.name%></p>
 <p>Description: <%= @objective.description%></p>
 <p>Deadline: <%= @objective.deadline%></p>
-
+<a href="/objective4s/<%= @objective.id %>/edit"><input type="button" value="Edit"></a>
+<br>
+<br>
 <h4>Strategies</h4>
 <a href="/objective4s/new">Add Strategies</a><br><br>
 <ul>

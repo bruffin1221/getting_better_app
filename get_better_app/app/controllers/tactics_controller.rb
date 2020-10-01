@@ -50,12 +50,15 @@ class TacticsController < ApplicationController
 
   # GET: /tactics/5/edit
   get "/tactics/:id/edit" do
+    @tactic=Tactic.find_by_id(params[:id])
     erb :"/tactics/edit.html"
   end
 
   # PATCH: /tactics/5
-  patch "/tactics/:id" do
-    redirect "/tactics/:id"
+  post "/tactics/:id" do
+    @tactic=Tactic.find_by_id(params[:id])
+    @tactic.update(name: params[:name], description: params[:description], deadline: params[:deadline])
+    redirect "/tactics/#{@tactic.id}"
   end
 
   # DELETE: /tactics/5/delete

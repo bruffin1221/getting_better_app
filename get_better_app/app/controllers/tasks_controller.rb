@@ -24,12 +24,15 @@ class TasksController < ApplicationController
 
   # GET: /tasks/5/edit
   get "/tasks/:id/edit" do
+    @task=Task.find_by_id(params[:id])
     erb :"/tasks/edit.html"
   end
 
   # PATCH: /tasks/5
-  patch "/tasks/:id" do
-    redirect "/tasks/:id"
+  post "/tasks/:id" do
+    @task=Task.find_by_id(params[:id])
+    @task.update(name: params[:name], description: params[:description], deadline: params[:deadline])
+    redirect "/tasks/#{@task.id}"
   end
 
   # DELETE: /tasks/5/delete

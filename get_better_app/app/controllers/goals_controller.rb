@@ -39,7 +39,7 @@ class GoalsController < ApplicationController
 
   # GET: /goals/5/edit
   get "/goals/:id/edit" do
-    @goal=Goal.find_by_id(20)
+    @goal=Goal.find_by_id(params[:id])
     erb :"/goals/edit.html"
   end
 
