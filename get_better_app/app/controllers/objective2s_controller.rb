@@ -53,7 +53,8 @@ class Objective2sController < ApplicationController
   end
 
   # DELETE: /objective2s/5/delete
-  delete "/objective2s/:id/delete" do
-    redirect "/objective2s"
+  delete "/objective2s/:id" do
+    Objective2.find_by_id(params[:id]).destroy
+    redirect "/goals"
   end
 end

@@ -1,6 +1,5 @@
 <h1> Edit <%= @task.name %></h1>
 
-
 <form method="POST" action="/tasks/<%= @task.id %>">
   <label>Name:</label><br>
   <input type="text" name="name" value="<%= @task.name %>"><br><br>
@@ -10,4 +9,5 @@
   <input type="text" name="deadline" value="<%= @task.deadline %>"><br>
   <input type="hidden" name="_method" value="patch">
   <input type="submit" value="Edit Task">
-</form>
+</form><br><br>
+

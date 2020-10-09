@@ -55,14 +55,15 @@ class TacticsController < ApplicationController
   end
 
   # PATCH: /tactics/5
-  post "/tactics/:id" do
+  patch "/tactics/:id/" do
     @tactic=Tactic.find_by_id(params[:id])
     @tactic.update(name: params[:name], description: params[:description], deadline: params[:deadline])
     redirect "/tactics/#{@tactic.id}"
   end
 
   # DELETE: /tactics/5/delete
-  delete "/tactics/:id/delete" do
-    redirect "/tactics"
+  delete "/tactics/:id" do
+    Tactic.find_by_id(params[:id]).destroy
+    redirect "/goals"
   end
 end

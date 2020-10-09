@@ -1,10 +1,16 @@
 <h1><%=@strategy.name%></h1>
 <p><%=@strategy.description%></p>
 <p><%=@strategy.deadline%></p>
-<a href="/strategies/<%= @strategy.id %>/edit"><input type="button" value="Edit"></a>
+<a href="/strategies/<%= @strategy.id %>/edit">Edit</a>
+<br>
+<br>
+<form action="/strategies/<%= @strategy.id %>" method="POST">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit"  id="submit " value="Delete">
 <br>
 <br>
 <h4>Tactics</h4>
+<br>
 <a href="/strategies/new">Add Tactics</a><br><br>
 <ul>
 <% @strategy.tactics.each do |s| %>

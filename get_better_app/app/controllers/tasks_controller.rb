@@ -29,14 +29,15 @@ class TasksController < ApplicationController
   end
 
   # PATCH: /tasks/5
-  post "/tasks/:id" do
+  patch "/tasks/:id" do
     @task=Task.find_by_id(params[:id])
     @task.update(name: params[:name], description: params[:description], deadline: params[:deadline])
     redirect "/tasks/#{@task.id}"
   end
 
   # DELETE: /tasks/5/delete
-  delete "/tasks/:id/delete" do
+  delete "/tasks/:id" do
+    Task.find_by_id(params[:id]).destroy
     redirect "/tasks"
   end
 end

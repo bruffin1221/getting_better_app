@@ -1,7 +1,13 @@
 <h1> <%= @tactic.name %></h1>
 <h3><%= @tactic.description %> </h3>
 <h3> <%= @tactic.deadline %></h3>
-<a href="/tactics/<%= @tactic.id %>/edit"><input type="button" value="Edit"></a>
+<a href="/tactics/<%= @tactic.id %>/edit">Edit</a>
+<br>
+<br>
+<form action="/tactics/<%= @tactic.id %>" method="POST">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit"  id="submit " value="Delete">
+</form>
 <br>
 <br>
 <h3> Tasks</h3>

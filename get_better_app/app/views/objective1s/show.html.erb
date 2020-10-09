@@ -2,8 +2,14 @@
 <p>Goal: <%= @objective.goal.name%></p>
 <p>Description: <%= @objective.description%></p>
 <p>Deadline: <%= @objective.deadline%></p>
-<a href="/objective1s/<%= @objective.id %>/edit"><input type="button" value="Edit"></a><br>
-
+<a href="/objective1s/<%= @objective.id %>/edit">Edit</a>
+<br>
+<br>
+<form action="/objective1s/<%= @objective.id %>" method="POST">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit"  id="submit " value="Delete">
+<br>
+<br>
 <h3>Strategies</h3>
 <br>
 <a href="/objective1s/new">Add Strategies</a><br><br>

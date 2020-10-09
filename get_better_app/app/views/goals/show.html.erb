@@ -1,34 +1,56 @@
 <h1> <%=@goal.name%> </h1>
 <h3><%=@goal.description%></h3>
 <h3><%=@goal.deadline%></h3> 
-<a href="/goals/<%= @goal.id %>/edit"><input type="button" value="Edit"></a><br>
+<a href="/goals/<%= @goal.id %>/edit">Edit</a><br>
+<br>
+<br>
+<form action="/goals/<%= @goal.id %>" method="POST">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit"  id="submit " value="Delete">
+<br>
 <br>
 <h3>Goals and Strategies</h3>
 <br>
+<% if !@goal.objective1.nil? %>
 <h5><a href="/objective1s/<%= @goal.objective1.id %>"><%=@goal.objective1.name%></a></h5>
+<% end %>
 <ul>
+<% if !@goal.objective1.nil? %>
 <% @goal.objective1.strategies.each do |strategy| %>
     <li><a href="/strategies/<%=strategy.id%>"><%=strategy.name%></a></li>
     <% end %>
+    <% end %>
 </ul>
-<br>  
+<br>
+<% if !@goal.objective2.nil? %>
 <h5><a href="/objective2s/<%= @goal.objective2.id %>"><%=@goal.objective2.name%></a></h5>
+<% end %>
 <ul>
+<% if !@goal.objective2.nil? %>
 <%  @goal.objective2.strategies.each do |strategy| %>
     <li><a href="/strategies/<%=strategy.id%>"><%=strategy.name%></a></li>
     <% end %>
-</ul>
-<br>
-<h5><a href="/objective3s/<%= @goal.objective3.id %>"><%=@goal.objective3.name%></a></h5>
-<ul>
-<%  @goal.objective3.strategies.each do |strategy| %>
-    <li><a href="/strategies/<%=strategy.id%>"><%=strategy.name%></a></li>
     <% end %>
 </ul>
 <br>
-<h5><a href="/objective4s/<%= @goal.objective4.id %>"><%=@goal.objective4.name%></a></h5>
+<% if !@goal.objective3.nil? %>
+<h5><a href="/objective3s/<%= @goal.objective3.id %>"><%=@goal.objective3.name%></a></h5>
+<% end %>
 <ul>
+<% if !@goal.objective3.nil? %>
+<%  @goal.objective3.strategies.each do |strategy| %>
+    <li><a href="/strategies/<%=strategy.id%>"><%=strategy.name%></a></li>
+    <% end %>
+    <% end %>
+</ul>
+<br>
+<% if !@goal.objective4.nil? %>
+<h5><a href="/objective4s/<%= @goal.objective4.id %>"><%=@goal.objective4.name%></a></h5>
+<% end %>
+<ul>
+<% if !@goal.objective4.nil? %>
 <%  @goal.objective4.strategies.each do |strategy| %>
     <li><a href="/strategies/<%=strategy.id%>"><%=strategy.name%></a></li>
+    <% end %>
     <% end %>
 </ul>

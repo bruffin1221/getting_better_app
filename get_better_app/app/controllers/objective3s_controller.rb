@@ -46,14 +46,15 @@ class Objective3sController < ApplicationController
   end
 
   # PATCH: /objective3s/5
-  post "/objective3s/:id" do
+  patch "/objective3s/:id" do
     @objective=Objective3.find_by_id(params[:id])
     @objective.update(name: params[:name], description: params[:description], deadline: params[:deadline])
     redirect "/objective3s/#{@objective.id}"
   end
 
   # DELETE: /objective3s/5/delete
-  delete "/objective3s/:id/delete" do
-    redirect "/objective3s"
+  delete "/objective3s/:id" do
+    Objective3.find_by_id(params[:id]).destroy
+    redirect "/goals"
   end
 end

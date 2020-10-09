@@ -60,14 +60,15 @@ class StrategiesController < ApplicationController
   end
 
   # PATCH: /strategies/5
-  post "/strategies/:id" do
+  patch "/strategies/:id" do
     @strategy=Strategy.find_by_id(params[:id])
     @strategy.update(name: params[:name], description: params[:description], deadline: params[:deadline])
     redirect "/strategies/#{@strategy.id}"
   end
 
   # DELETE: /strategies/5/delete
-  delete "/strategies/:id/delete" do
-    redirect "/strategies"
+  delete "/strategies/:id" do
+    Strategy.find_by_id(params[:id]).destroy
+    redirect "/goals"
   end
 end

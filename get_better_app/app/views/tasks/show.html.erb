@@ -3,5 +3,13 @@
 <p><%= @task.deadline %></p>
 <p><%= @task.tactic.name %></p>
 
-<a href="/tasks/<%= @task.id %>/edit"><input type="button" value="Edit"></a><br><br>
+<a href="/tasks/<%= @task.id %>/edit">Edit</a>
+<br>
+<br>
 <a href="/tactics/<%= @task.tactic.id %>">Return to <%=@task.tactic.name%></a>
+<br>
+<br>
+<form action="/tasks/<%= @task.id %>" method="POST">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit"  id="submit " value="Delete">
+</form>
